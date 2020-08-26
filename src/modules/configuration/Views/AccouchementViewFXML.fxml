@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@../../../Styles/generale.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.configuration.Views.AccouchementViewFXMLController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints percentHeight="0.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.0" minHeight="1.0" percentHeight="0.0" prefHeight="1.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Separator prefHeight="0.0" prefWidth="600.0" styleClass="h-separator-normal" GridPane.rowIndex="1" />
+      <GridPane GridPane.rowIndex="2">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="1.0" percentWidth="0.0" prefWidth="1.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" styleClass="v-separator-normal" GridPane.columnIndex="1" />
+            <VBox maxWidth="-Infinity" prefHeight="585.0" prefWidth="100.0" styleClass="form" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <children>
+                  <Label text="Poids de l'enfant(Kg)*" />
+                  <TextField fx:id="txtPoidsEnfant" promptText="poids de l'enfant" />
+                  <Label text="Sexe de l'enfant*" />
+                  <HBox prefHeight="29.0" prefWidth="300.0">
+                     <children>
+                        <ComboBox fx:id="cbSexes" prefWidth="150.0" styleClass="combo-box" />
+                        <Button fx:id="btnFreshSexe" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnFresh_clicked" styleClass="button-info" text="Button">
+                           <graphic>
+                              <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="24.0" style="-fx-shape: &quot;M2.7499252,30.299848L18.669936,37.698865 14.349932,40.728464C17.789935,43.70807 22.169938,45.567823 26.799941,45.567823 35.689946,45.567823 43.469952,39.758592 45.309953,31.289716L45.599953,30.639802 53.339959,30.639802 52.979958,31.949628C50.759957,44.417974 39.749951,52.776868 26.799941,52.776868 19.539937,52.776868 12.809932,49.897249 7.8799284,44.937906L4.2499259,47.387582z M26.539532,0C33.809293,-6.8510417E-08,40.529256,2.7602325,45.459096,7.7205935L49.089028,5.050457 50.589001,21.701824 34.669381,15.291273 38.989247,12.360982C35.549249,9.3807617 31.16945,7.7306042 26.539532,7.7306042 17.649688,7.7306042 9.8698071,13.921167 8.0298765,22.401832L7.7398427,23.832002 0,23.832002 0.3599781,21.681804C2.5799068,9.2108264,13.589706,-6.8510417E-08,26.539532,0z&quot;;" styleClass="region" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" top="-3.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label text="Coloration de l'enfant*" />
+                  <TextField fx:id="txtColoration" promptText="coloration de l'enfant" />
+                  <Label text="Premier Cri de l'enfant" />
+                  <TextField fx:id="txtCri" promptText="premier cri de l'enfant" />
+                  <Label text="Etat de l'enfant*" />
+                  <HBox prefHeight="29.0" prefWidth="300.0">
+                     <children>
+                        <ComboBox fx:id="cbEtatEnfants" prefWidth="150.0" styleClass="combo-box" />
+                        <Button fx:id="btnFreshEtat" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnFresh_clicked" styleClass="button-info" text="Button">
+                           <graphic>
+                              <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="24.0" style="-fx-shape: &quot;M2.7499252,30.299848L18.669936,37.698865 14.349932,40.728464C17.789935,43.70807 22.169938,45.567823 26.799941,45.567823 35.689946,45.567823 43.469952,39.758592 45.309953,31.289716L45.599953,30.639802 53.339959,30.639802 52.979958,31.949628C50.759957,44.417974 39.749951,52.776868 26.799941,52.776868 19.539937,52.776868 12.809932,49.897249 7.8799284,44.937906L4.2499259,47.387582z M26.539532,0C33.809293,-6.8510417E-08,40.529256,2.7602325,45.459096,7.7205935L49.089028,5.050457 50.589001,21.701824 34.669381,15.291273 38.989247,12.360982C35.549249,9.3807617 31.16945,7.7306042 26.539532,7.7306042 17.649688,7.7306042 9.8698071,13.921167 8.0298765,22.401832L7.7398427,23.832002 0,23.832002 0.3599781,21.681804C2.5799068,9.2108264,13.589706,-6.8510417E-08,26.539532,0z&quot;;" styleClass="region" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" top="-3.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label text="Voie de l'accouchement*" />
+                  <HBox prefHeight="29.0" prefWidth="300.0">
+                     <children>
+                        <ComboBox fx:id="cbVoies" prefWidth="150.0" styleClass="combo-box" />
+                        <Button fx:id="btnFreshVoie" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnFresh_clicked" styleClass="button-info" text="Button">
+                           <graphic>
+                              <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="24.0" style="-fx-shape: &quot;M2.7499252,30.299848L18.669936,37.698865 14.349932,40.728464C17.789935,43.70807 22.169938,45.567823 26.799941,45.567823 35.689946,45.567823 43.469952,39.758592 45.309953,31.289716L45.599953,30.639802 53.339959,30.639802 52.979958,31.949628C50.759957,44.417974 39.749951,52.776868 26.799941,52.776868 19.539937,52.776868 12.809932,49.897249 7.8799284,44.937906L4.2499259,47.387582z M26.539532,0C33.809293,-6.8510417E-08,40.529256,2.7602325,45.459096,7.7205935L49.089028,5.050457 50.589001,21.701824 34.669381,15.291273 38.989247,12.360982C35.549249,9.3807617 31.16945,7.7306042 26.539532,7.7306042 17.649688,7.7306042 9.8698071,13.921167 8.0298765,22.401832L7.7398427,23.832002 0,23.832002 0.3599781,21.681804C2.5799068,9.2108264,13.589706,-6.8510417E-08,26.539532,0z&quot;;" styleClass="region" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" top="-3.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label text="Date de l'accouchement*" />
+                  <DatePicker fx:id="dpAccouchement" editable="false" prefHeight="30.0" prefWidth="304.0" />
+                  <Label text="Fiche de la mère*" />
+                  <HBox prefHeight="29.0" prefWidth="300.0">
+                     <children>
+                        <ComboBox fx:id="cbFiches" prefWidth="150.0" styleClass="combo-box" />
+                        <Button fx:id="btnFreshFiche" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnFresh_clicked" styleClass="button-info" text="Button">
+                           <graphic>
+                              <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="24.0" style="-fx-shape: &quot;M2.7499252,30.299848L18.669936,37.698865 14.349932,40.728464C17.789935,43.70807 22.169938,45.567823 26.799941,45.567823 35.689946,45.567823 43.469952,39.758592 45.309953,31.289716L45.599953,30.639802 53.339959,30.639802 52.979958,31.949628C50.759957,44.417974 39.749951,52.776868 26.799941,52.776868 19.539937,52.776868 12.809932,49.897249 7.8799284,44.937906L4.2499259,47.387582z M26.539532,0C33.809293,-6.8510417E-08,40.529256,2.7602325,45.459096,7.7205935L49.089028,5.050457 50.589001,21.701824 34.669381,15.291273 38.989247,12.360982C35.549249,9.3807617 31.16945,7.7306042 26.539532,7.7306042 17.649688,7.7306042 9.8698071,13.921167 8.0298765,22.401832L7.7398427,23.832002 0,23.832002 0.3599781,21.681804C2.5799068,9.2108264,13.589706,-6.8510417E-08,26.539532,0z&quot;;" styleClass="region" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" top="-3.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                     <children>
+                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnSave_Clicked" styleClass="btn-save" text="Enregistrer" />
+                        <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#btnCancel_Clicked" text="Annuler" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <GridPane GridPane.columnIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ListView fx:id="lstAccouchements" prefHeight="200.0" prefWidth="200.0" styleClass="general-list-view" GridPane.rowIndex="1" />
+                  <ImageView fitHeight="300.0" fitWidth="500.0" opacity="0.18" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../../../images/bebe.PNG" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtFilter" maxWidth="-Infinity" onAction="#txtFilter_TextChanged" prefWidth="400.0" promptText="Filtrer les accouchements ici" GridPane.halignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

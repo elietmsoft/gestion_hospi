@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="gridView" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="320.0" styleClass="container" stylesheets="@cycle-item.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.0" minWidth="1.0" percentWidth="0.0" prefWidth="1.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="1.0" percentHeight="0.0" prefHeight="1.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="1.0" percentHeight="0.0" prefHeight="1.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label fx:id="txtNoms" styleClass="title" text="NDELELA - MAYOMBO - FRIDA" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="txtLogin" text="Accouchement:" textFill="#b92323">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+      <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="247.0" styleClass="description" GridPane.rowIndex="1">
+         <children>
+            <Label text="Date Acoouchement">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text=" :   " />
+            <Label fx:id="txtDate" text="24/08/2020" textFill="#ee2f2f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</GridPane>

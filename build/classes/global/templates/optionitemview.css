@@ -1,0 +1,27 @@
+.container {
+    -fx-background-color: transparent;
+}
+
+.container .content {
+    -fx-font-size: 15px;
+    -fx-text-fill: #000;
+}
+
+.indicator{
+    -fx-pref-width:5px;
+    -fx-pref-height:24px;
+    -fx-fill: transparent;
+}
+
+.list-cell:selected .indicator {
+    -fx-fill: #2888F3;
+}
+
+.list-cell:selected .container .content {
+    -fx-font-size: 15px;
+    -fx-text-fill: #000;
+}
+
+.list-cell:hover .container {
+    -fx-background-color: rgba(0,0,0,0.05); 
+}

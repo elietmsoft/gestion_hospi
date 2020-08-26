@@ -1,0 +1,307 @@
+/*
+ * Empty Stylesheet file.
+ */
+*{
+    /* MENUS VARIABLES */
+    -fx-mainMenuBarHeight : 30px;
+    -fx-verticalMenuBarWidth : 200px;
+    -fx-verticalMenuBarHeight : 40px;
+    -fx-buttonDefaultWidth: 120px;
+    -fx-buttonDefaultHeight: 32px;
+    /* FORMS VARIABLES */
+    -fx-addFormWidth : 300px;
+    
+    -fx-font-family: "Segoe UI";
+}
+
+.mainFxmlClass {
+
+}
+
+.anchor-pane{
+    -fx-background-color: #fff;
+}
+
+.border-pane{
+    -fx-background-color: #f00;
+}
+
+.hbox{
+    -fx-background-color: orangered;
+}
+
+.main-menu-bar{
+    -fx-background-color: #fff;
+    -fx-pref-height: -fx-mainMenuBarHeight;
+}
+
+.main-menu-bar-option{
+    -fx-background-color: transparent;
+    -fx-font-size: 11px;
+    -fx-font-weight:bold;
+    -fx-background-radius: 0;
+    -fx-text-fill: rgba(119, 119, 119, 0.87);
+    -fx-padding: 0;
+    -fx-margin: 0;
+    
+}
+
+.h-separator-normal *.line{
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: #eaeaea;
+    -fx-border-color: #eaeaea;
+    -fx-pref-height:1;
+    -fx-max-height:1;
+}
+
+.h-separator-light *.line{
+    -fx-background-color: #fafafa;
+    -fx-border-color: #fafafa;
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0;
+    -fx-pref-height:1;
+    -fx-max-height:1;
+}
+
+.v-separator-normal *.line{
+    -fx-background-color: #eaeaea;
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 0 1;
+    -fx-border-color: #eaeaea;
+    -fx-pref-width:1;
+    -fx-max-width:1;
+}
+
+.v-separator-light *.line{
+    -fx-background-color: #fafafa;
+    -fx-border-color: #fafafa;
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 0 1;
+    -fx-pref-width:1;
+    -fx-max-width:1;
+}
+
+.main-menu-bar-option:selected{
+    -fx-text-fill: rgba(0,0,0,1);
+}
+.main-menu-bar-option:hover{
+    -fx-font-style: italic;
+}
+
+/* Vertical Navigation Bar */
+.vertical-menu-bar {
+    -fx-background-color: #eaeaea;
+    -fx-pref-width: -fx-verticalMenuBarWidth;
+    
+}
+
+.vertical-menu-bar-option{
+    -fx-background-color: transparent;
+    -fx-font-size: 15px;
+    -fx-pref-width: -fx-verticalMenuBarWidth;
+    -fx-pref-height: -fx-verticalMenuBarHeight;
+    -fx-background-radius: 0;
+    -fx-text-alignment: left;
+    -fx-graphic-text-gap: 10px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill: rgba(0, 0, 0, 1);  
+}
+
+.vertical-menu-bar-option .svg-path{
+    -fx-pref-width: 24px;
+    -fx-pref-height: 24px;
+    -fx-background-color:black;
+}
+
+.vertical-menu-bar-option:selected{
+    -fx-background-color: #007ACC;
+    -fx-text-fill: rgba(255, 255, 255, 1);  
+}
+
+.vertical-menu-bar-option:selected .svg-path{
+    -fx-background-color:white;
+}
+/* FORMS */
+
+.form {
+    -fx-pref-width: -fx-addFormWidth;
+    -fx-alignment: TOP_LEFT;
+    -fx-margin: 10px;
+    -fx-spacing: 5px;
+    -fx-halignment: center;
+    -fx-valignment: top;
+}
+
+.form1 {
+    -fx-pref-width:350px;
+    
+    -fx-alignment:CENTER;
+    -fx-margin: 10px;
+    -fx-spacing: 5px;
+    -fx-halignment:center;
+    -fx-valignment: center;
+}
+
+
+
+.form .label {
+    -fx-font-size : 14px;
+    -fx-font-weight: bold;
+    -fx-margin: 30px;
+    -fx-alignment: TOP_LEFT;
+}
+
+.form-title {
+    -fx-font-weight: bold;
+    -fx-font-size : 20px;
+    -fx-text-fill:#000;
+}
+
+.text-field, .text-area{
+    -fx-border-color: #ccc;
+    -fx-border-width: 2px;
+}
+
+.text-field{
+    -fx-pref-height: 30px;
+}
+
+.text-field:focused, .text-area:focused{
+    -fx-border-color: #007ACC;
+}
+
+.combo-box{
+    -fx-pref-height: 30px;
+    -fx-pref-width: -fx-addFormWidth;
+}
+
+.button {
+    -fx-background-color: #dadbdc;
+    -fx-text-fill: #555;
+    -fx-font-size: 14px;
+    -fx-pref-height: -fx-buttonDefaultHeight;
+    -fx-pref-width: -fx-buttonDefaultWidth;
+    -fx-background-radius:0;
+}
+
+.button:hover {
+    -fx-background-color: #eaeaea;
+    -fx-text-fill: #007ACC;
+}
+
+.button-menu{
+    -fx-pref-width:50px;
+    -fx-pref-height:50px;
+    -fx-background-color:#f2f2f2;
+    -fx-padding:0px;
+}
+
+.button-menu:hover{
+    -fx-background-color:rgba(0,0,0,0.08);
+}
+
+.btn-save {
+    -fx-background-color: #007ACC;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+
+.btn-save:hover{
+    -fx-background-color: #ccc;
+    -fx-text-fill: #000;
+    -fx-font-size: 14px;
+}
+
+.button-info{
+    -fx-pref-width:36px;
+    -fx-pref-height: 36px;
+    -fx-background-radius: 18px;
+    -fx-background-insets: 0, 1;
+    -fx-background-color: #2888f3, white;
+}
+
+.button-info .region{
+    -fx-pref-width:24px;
+    -fx-pref-height: 24px;
+    -fx-background-color: #2888f3
+}
+
+.button-info:hover{
+    -fx-background-color: #ff0, #000;
+}
+
+.button-info:hover .region{
+    -fx-background-color: #ff0;
+}
+/* ListView Styles */
+.general-list-view{
+    -fx-padding:1px;
+    -fx-background-insets: 1px;
+    -fx-background-color: transparent;
+}
+
+.general-list-view .list-cell:odd, .general-list-view .list-cell:even {
+    -fx-background-color:transparent;
+    -fx-padding:0px;
+}
+
+.option-list-view{
+    -fx-padding:1px;
+    -fx-background-insets: 1px;
+    -fx-background-color: #f2f2f2;
+}
+
+.option-list-view .list-cell {
+    -fx-background-color:transparent;
+    -fx-padding:0px;
+}
+
+.option-list-view .list-cell:hover{
+  -fx-background-color: transparent;  
+}
+
+.option-list-view .scroll-bar:horizontal .increment-arrow,
+.option-list-view .scroll-bar:horizontal .decrement-arrow,
+.option-list-view .scroll-bar:horizontal .increment-button,
+.option-list-view .scroll-bar:horizontal .decrement-button {
+    -fx-padding:0;
+}
+/*
+.list-cell:odd:selected{
+    -fx-background-color:#000;
+}
+
+.list-cell:even:selected{
+    -fx-background-color:#2888F3;
+}
+*/
+.general-list-view .list-cell:selected{
+    -fx-background-color:#2888F3;
+}
+
+.general-list-view .list-cell:hover{
+  -fx-background-color: rgba(0,0,0,0.05);  
+}
+
+.button-back{
+    -fx-pref-width:22px;
+    -fx-pref-height: 22px;
+    -fx-background-radius: 11px;
+    -fx-background-insets: 0, 2;
+    -fx-background-color: #999, white;
+}
+
+.button-back .region{
+    -fx-pref-width:10px;
+    -fx-pref-height: 10px;
+    -fx-background-color: #333;
+}
+
+.button-back:hover{
+    -fx-background-color: #333, #fff;
+}
+
+.button-back:hover .region{
+    -fx-background-color: #333;
+}

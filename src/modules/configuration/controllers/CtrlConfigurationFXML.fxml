@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane prefHeight="623.0" prefWidth="743.0" stylesheets="@../../../Styles/generale.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.configuration.controllers.CtrlConfigurationFXMLController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="0.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints percentHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <GridPane GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="0.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ListView fx:id="lstOptions" prefHeight="200.0" prefWidth="51.0" styleClass="option-list-view" />
+            <AnchorPane fx:id="containerLayout" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <GridPane fx:id="gridGen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="652.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" percentWidth="0.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" percentHeight="0.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" percentHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" percentHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="540.0" fitWidth="537.0" opacity="0.6" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.rowSpan="6" GridPane.valignment="TOP">
+                           <image>
+                              <Image url="@../../../images/docta.PNG" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets right="-80.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <VBox fx:id="gridViewLogin" maxWidth="-Infinity" prefHeight="200.0" prefWidth="100.0" styleClass="form" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                           <children>
+                              <Label text="Nom Utilisateur" textFill="#007acc" />
+                              <HBox prefHeight="35.0" prefWidth="300.0">
+                                 <children>
+                                    <TextField fx:id="txtUsername" prefWidth="255.0" />
+                                    <Button contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" styleClass="button-info" text="Button">
+                                       <HBox.margin>
+                                          <Insets left="3.0" top="-3.0" />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="24.0" style="-fx-shape: &quot;M227.021411376515,3.11325970428836E-13C292.695346313039,-4.3625252046181E-06 349.218234496632,45.8481483459476 349.218234496632,133.302810668946 349.218234496632,190.189529418946 323.333255248585,247.996154785157 289.467563109914,283.886108398438L289.652011352101,283.886108398438C276.65625329546,324.550872802735 297.448031859914,334.195098876953 300.739657836476,335.297546386719 372.904391723195,359.878662109375 454.00000329546,406.17953491211 454.00000329546,453.633880615235 454.00000329546,456.130737304688 454.00000329546,457.795288085938 454.00000329546,458.999969482422L0,458.999969482422C3.29546037391992E-06,457.795288085938 3.29546037391992E-06,456.130737304688 0,453.633880615235 3.29546037391992E-06,407.566680908203 80.7056917720229,360.900848388672 149.47250695757,335.297546386719 154.445147948781,333.421112060547 178.202105956593,320.112030029297 164.915606933156,284.25863647461 130.85141320757,248.441528320313 105.108210998097,190.408523559571 105.108210998097,133.302810668946 105.108210998097,45.8481483459476 161.304889159718,-4.3625252046181E-06 227.021411376515,3.11325970428836E-13z&quot;;" styleClass="region" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Label text="Mot de Passe" textFill="#007acc" />
+                              <HBox prefHeight="28.0" prefWidth="300.0">
+                                 <children>
+                                    <PasswordField fx:id="txtPassword" prefWidth="258.0" />
+                                    <Button contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="0.0" styleClass="button-info" text="Button">
+                                       <graphic>
+                                          <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="24.0" style="-fx-shape: &quot;M216.703,392.021C193.561,392.021 174.807,411.285 174.807,435.042 174.807,452.242 184.785,466.809 198.999,473.715L198.999,532.389 234.509,532.389 234.509,473.679C248.741,466.809 258.736,452.188 258.736,435.042 258.736,411.285 239.948,392.021 216.703,392.021z M210.842,49.7245C152.579,49.7245,105.378,101.086,105.378,164.42L105.378,224.989C105.378,232.632,106.107,240.089,107.412,247.346L314.373,247.346C315.695,240.089,316.406,232.632,316.406,224.989L316.406,164.42C316.406,101.086,269.104,49.7245,210.842,49.7245z M210.842,0C289.096,0,352.577,68.9881,352.577,154.05L352.577,235.357C352.577,240.478 352.324,245.541 351.883,250.552 392.001,261.601 421.768,301.065 421.768,348.137L421.768,553.033C421.768,608.65,380.243,653.768,329.096,653.768L92.6889,653.768C41.4571,653.768,2E-06,608.65,0,553.033L0,348.137C2E-06,301.047 29.7501,261.601 69.9193,250.531 69.4788,245.541 69.2245,240.478 69.2245,235.357L69.2245,154.05C69.2245,68.9881,132.604,0,210.842,0z&quot;;" styleClass="region" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets left="3.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="35.0">
+                                 <children>
+                                    <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnSave_Clicked" styleClass="btn-save" text="Se Connecter" />
+                                    <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#btnCancel_Clicked" text="Quitter" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+         </children>
+      </GridPane>
+      <Button fx:id="btnMenu" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" onAction="#btnMenu_Click" prefHeight="121.0" prefWidth="65.0" styleClass="button-menu" text="Button">
+         <graphic>
+            <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="12.0" prefWidth="18.0" style="-fx-background-color: #2888F3; -fx-shape: &quot;M1.230957,19.693036L30.768982,19.693036C31.506958,19.693036,32,20.185041,32,20.923019L32,22.154038C32,22.893054,31.506958,23.384999,30.768982,23.384999L1.230957,23.384999C0.49194336,23.384999,0,22.893054,0,22.154038L0,20.923019C0,20.185041,0.49194336,19.693036,1.230957,19.693036z M1.230957,9.8470059L30.768982,9.8470059C31.506958,9.8470059,32,10.339011,32,11.076989L32,12.30801C32,13.045987,31.506958,13.53903,30.768982,13.53903L1.230957,13.53903C0.49194336,13.53903,0,13.047025,0,12.30801L0,11.076989C0,10.339011,0.49194336,9.8470059,1.230957,9.8470059z M1.230957,0L30.768982,0C31.506958,-6.3337211E-08,32,0.49298194,32,1.2309594L32,2.4619804C32,3.1999579,31.506958,3.6930011,30.768982,3.6930013L1.230957,3.6930013C0.49194336,3.6930011,0,3.1999579,0,2.4619804L0,1.2309594C0,0.49298194,0.49194336,-6.3337211E-08,1.230957,0z&quot;;" />
+         </graphic>
+      </Button>
+      <GridPane GridPane.columnIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="0.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="txtTitle" styleClass="form-title">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Button contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" styleClass="button-info" text="Button" GridPane.columnIndex="1">
+               <graphic>
+                  <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="24.0" style="-fx-shape: &quot;M12.663999,31L17.343955,31C17.619952,31 17.84395,31.224 17.84395,31.5 17.84395,31.776 17.619952,32 17.343955,32L12.663999,32C12.388001,32 12.164003,31.776 12.164003,31.5 12.164003,31.224 12.388001,31 12.663999,31z M11.883967,28.598991L18.123975,28.598991C18.399976,28.598991 18.623976,28.82299 18.623976,29.098991 18.623976,29.37499 18.399976,29.598991 18.123975,29.598991L11.883967,29.598991C11.606967,29.598991 11.383966,29.37499 11.383966,29.098991 11.383966,28.82299 11.606967,28.598991 11.883967,28.598991z M26,10.5L29,10.5C29.552999,10.5 30,10.947 30,11.5 30,12.053 29.552999,12.5 29,12.5L26,12.5C25.447,12.5 25,12.053 25,11.5 25,10.947 25.447,10.5 26,10.5z M1,10.5L3.9999995,10.5C4.5529999,10.5 4.9999999,10.947 4.9999999,11.5 4.9999999,12.053 4.5529999,12.5 3.9999995,12.5L1,12.5C0.44700003,12.5 0,12.053 0,11.5 0,10.947 0.44700003,10.5 1,10.5z M14.999918,8.5000013C11.250889,8.5000014 8.1999812,11.656982 8.199981,15.536985 8.1999812,16.622983 8.4409485,17.674984 8.9159243,18.661983L8.9629219,18.778987C9.2499096,19.635981,10.667881,21.642999,11.494908,22.708002L11.563878,22.807977C12.246984,23.950004,12.537878,24.978019,12.658972,25.700004L17.308881,25.700004C17.429975,24.978019,17.720991,23.950004,18.403975,22.807977L18.472945,22.707025C18.490889,22.684015 20.294969,20.356989 20.898974,19.043025 21.49895,17.936031 21.799976,16.744992 21.799976,15.536985 21.799976,11.656982 18.748947,8.5000014 14.999918,8.5000013z M14.999918,6.5000028C19.851976,6.5000026 23.79998,10.554016 23.79998,15.536985 23.79998,17.078 23.414968,18.598995 22.684988,19.937983 22.059987,21.30401 20.378953,23.512016 20.091966,23.884025 19.194993,25.411003 19.223923,26.645986 19.223923,26.65801L19.257981,27.689992 18.224898,27.700002 10.690952,27.700002 10.74393,26.648977C10.74393,26.64501 10.772983,25.411003 9.8769853,23.885002 9.5099196,23.408012 7.5919482,20.887994 7.0879191,19.47497 6.498929,18.231014 6.1999784,16.906003 6.1999782,15.536985 6.1999784,10.554016 10.146883,6.5000026 14.999918,6.5000028z M5.2357305,3.2319894C5.4915829,3.2319894,5.7475603,3.3297346,5.9430431,3.5252256L8.4778192,6.0601038C8.8687847,6.4510851 8.8687847,7.0830548 8.4778192,7.4740361 8.2828364,7.6690267 8.026859,7.767022 7.7708815,7.767022 7.5149043,7.767022 7.2589269,7.6690267 7.0639442,7.4740361L4.529168,4.9391578C4.1382024,4.5481762 4.1382024,3.9152067 4.529168,3.5252256 4.7241507,3.3297346 4.9798781,3.2319894 5.2357305,3.2319894z M24.129253,2.8740335C24.385105,2.8740332 24.640834,2.9717779 24.835819,3.1672668 25.226785,3.5572448 25.226785,4.1902094 24.835819,4.5811871L22.300029,7.1170448C22.105045,7.3120338 21.849066,7.4100283 21.593088,7.4100283 21.337109,7.4100283 21.08113,7.3120338 20.886146,7.1170448 20.495179,6.7260668 20.495179,6.0941023 20.886146,5.7031245L23.421936,3.1672668C23.61742,2.9717779,23.873397,2.8740332,24.129253,2.8740335z M15,0C15.553,0,16,0.44700003,16,1L16,4.0000005C16,4.5530001 15.553,5.0000001 15,4.9999999 14.447,5.0000001 14,4.5530001 14,4.0000005L14,1C14,0.44700003,14.447,0,15,0z&quot;;" styleClass="region" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

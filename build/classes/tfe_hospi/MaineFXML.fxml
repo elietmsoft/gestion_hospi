@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.web.WebView?>
+
+<GridPane minHeight="600.0" minWidth="900.0" stylesheets="@../Styles/generale.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tfe_hospi.FXMLDocumentController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" percentHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="1.0" percentHeight="0.0" prefHeight="1.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Separator prefHeight="1.0" prefWidth="200.0" styleClass="separator-normal" GridPane.rowIndex="1" />
+      <GridPane styleClass="main-menu-bar">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="0.0" />
+          <ColumnConstraints hgrow="SOMETIMES" percentWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0" styleClass="main-menu-bar" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+               <children>
+                  <ToggleButton fx:id="tbConfiguration" mnemonicParsing="false" onAction="#tbOption_Clicked" styleClass="main-menu-bar-option" text="CONFIGURATION">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tbOptionsGroup" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="14.0" prefWidth="1.0" styleClass="v-separator-normal" />
+                  <ToggleButton fx:id="tbAccueil" mnemonicParsing="false" onAction="#tbOption_Clicked" styleClass="main-menu-bar-option" text="ACCUEIL" toggleGroup="$tbOptionsGroup" />
+               </children>
+            </HBox>
+            <Button contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" styleClass="button-back" text="Button">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+               <graphic>
+                  <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="18.0" style="-fx-shape: &quot;M11.299988,0L16.599976,0 7.0999756,8.8999959 32,8.8999959 32,12.399997 7.0999756,12.399997 16.5,21.299993 16.400024,21.399999 11.299988,21.399999 2.5999756,13.100009 0,10.699985z&quot;;" styleClass="region" />
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+      <WebView fx:id="wvBG" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <AnchorPane fx:id="containerLayout" prefHeight="18.0" prefWidth="18.0" styleClass="anchor-pane" GridPane.rowIndex="2" />
+   </children>
+</GridPane>

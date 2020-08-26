@@ -1,0 +1,27 @@
+.container {
+    -fx-background-color: transparent;
+    -fx-padding: 0px 10px;
+}
+
+.title{
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000;
+}
+
+.description .label{
+    -fx-text-fill: #999;
+}
+
+.list-cell:selected .container {
+    -fx-background-color: #2888F3;
+}
+
+
+.list-cell:selected .title {
+    -fx-text-fill: #fff;
+}
+
+.list-cell:selected .description .label{
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+}

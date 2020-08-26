@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<GridPane cacheShape="false" centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.accueil.controllers.CtrlAcFXMLController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" percentWidth="0.0" prefWidth="200.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" percentHeight="0.0" prefHeight="120.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="40.0" minHeight="10.0" percentHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.rowSpan="4" GridPane.valignment="TOP">
+         <image>
+            <Image url="@../../../images/femmme.PNG" />
+         </image>
+         <GridPane.margin>
+            <Insets right="120.0" top="50.0" />
+         </GridPane.margin>
+      </ImageView>
+      <ImageView fitHeight="540.0" fitWidth="537.0" opacity="0.74" pickOnBounds="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="4" GridPane.valignment="TOP">
+         <image>
+            <Image url="@../../../images/femme1.PNG" />
+         </image>
+      </ImageView>
+      <Label text="HOPITAL MOKOLE" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <font>
+            <Font name="Century Gothic Bold" size="36.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="-50.0" />
+         </GridPane.margin>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.29523809523809524">
+               <stops>
+                  <Stop color="#fca5b9" />
+                  <Stop color="#2f0b13" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label text="Centre de reception des femmes enceintes" textFill="#462029" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="-50.0" />
+         </GridPane.margin>
+      </Label>
+      <VBox prefHeight="305.0" prefWidth="196.0" spacing="10.0" styleClass="form" stylesheets="@../../../Styles/generale.css" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+         <children>
+            <Label text="AUTHENTIFICATION">
+               <VBox.margin>
+                  <Insets left="35.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Castellar" size="14.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.6238095238095238" endY="1.0" startX="0.26666666666666666" startY="0.18095238095238098">
+                     <stops>
+                        <Stop color="#b93333" />
+                        <Stop color="#dd3b3b" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField styleClass="text-field" stylesheets="@../../../Styles/generale.css">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextField>
+            <PasswordField styleClass="text-field" stylesheets="@../../../Styles/generale.css">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </PasswordField>
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="89.0" prefWidth="0.0" styleClass="btn-save" text="Button" />
+         </children>
+      </VBox>
+   </children>
+</GridPane>
